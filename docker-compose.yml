@@ -1,0 +1,10 @@
+version: '2'
+services:
+    plantilla:
+        image: angular:18
+        working_dir: /app
+        ports:
+            - 4201:4201
+        volumes:
+            - ./:/app:delegated
+        command: ["ng", "serve", "--port", "4201", "--host", "0.0.0.0", "--disable-host-check"]
